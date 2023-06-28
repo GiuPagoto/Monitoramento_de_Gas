@@ -1,0 +1,1138 @@
+[
+    {
+        "id": "4feba27cbb29cdf4",
+        "type": "tab",
+        "label": "Detecção de Gás",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f98ef6dc4bf00888",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "pagoto.duckdns.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3046f6ea24ac700b",
+        "type": "ui_tab",
+        "name": "Sistema de Detecção de Gás ",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "461e3f8b38b85ec6",
+        "type": "ui_tab",
+        "name": "Gráfico e Tabela",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a139738a6814e2a9",
+        "type": "ui_group",
+        "name": "Monitoramento do GN",
+        "tab": "3046f6ea24ac700b",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e20cd85b889eb118",
+        "type": "ui_group",
+        "name": "Monitoramento do GLP",
+        "tab": "3046f6ea24ac700b",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3c1b09fa4c168fdf",
+        "type": "ui_group",
+        "name": "Gráfico GN e GLP",
+        "tab": "461e3f8b38b85ec6",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "31fbc22d7060ceb5",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#ff7300",
+                "baseFont": "Palatino Linotype,Palatino,Book Antiqua,serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#ff7300",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#ff7300",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ff9d4d",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#ff7300",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Palatino Linotype,Palatino,Book Antiqua,serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8c7e6b9829da8806",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "mysql.c9zqqeqk4hcn.us-east-1.rds.amazonaws.com",
+        "port": "3306",
+        "db": "deteccao_vazamento_gas",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "caaec5e51d5b8b50",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "3c1b09fa4c168fdf",
+        "order": 2,
+        "width": 20,
+        "height": 1
+    },
+    {
+        "id": "dc52bdc18ae9bcf8",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 2,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "a5c4809a25919848",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "caf3f885d9ab86d6",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "16172c765918d02a",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "214f3019bb4bea23",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bdabbb49e36ead1b",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "a139738a6814e2a9",
+        "order": 8,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "8d935a9548454b3f",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 2,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "7ea653f8bd0ed61b",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "513401962bc69e97",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a3978f57e4467561",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "93dfce9e9e7f2ab0",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "5b8fc16dcbbd51e3",
+        "type": "ui_spacer",
+        "z": "4feba27cbb29cdf4",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 8,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "96291c263ae5650e",
+        "type": "comment",
+        "z": "4feba27cbb29cdf4",
+        "name": "Leitura analógica",
+        "info": "",
+        "x": 360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "25ca3063a4d9f48c",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "Turn On LED",
+        "func": "var sensorValuegas_petroleo = msg.payload;\n\nif (sensorValuegas_petroleo > 25) {\n    // LED Verde\n    msg.payload = true;\n    msg.color = \"red\"; \n} else {\n    // LED Vermelho\n    msg.payload = false;\n    msg.color = \"green\"; \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "bdffa9294f976581"
+            ]
+        ]
+    },
+    {
+        "id": "6bfbef1c79b32783",
+        "type": "mqtt in",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "topic": "esp32/gas_petroleo",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "f98ef6dc4bf00888",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "25ca3063a4d9f48c",
+                "506dd00b90a98034",
+                "664a3612e136fcdc"
+            ]
+        ]
+    },
+    {
+        "id": "bff15b64922cf024",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "gas_natural",
+        "func": "\nvar gas_natural = msg.payload;\n\nmsg.gas_natural = gas_natural;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 500,
+        "wires": [
+            [
+                "c8fa1f44872a77d9"
+            ]
+        ]
+    },
+    {
+        "id": "f93b14d0719e6e6e",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "gas_petroleo",
+        "func": "\n\nvar gas_petroleo = msg.payload;\n\nmsg.gas_petroleo = gas_petroleo;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 560,
+        "wires": [
+            [
+                "c8fa1f44872a77d9"
+            ]
+        ]
+    },
+    {
+        "id": "c8fa1f44872a77d9",
+        "type": "join",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "6acc377296bdddbd"
+            ]
+        ]
+    },
+    {
+        "id": "6acc377296bdddbd",
+        "type": "delay",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 560,
+        "wires": [
+            [
+                "01ab55a82d5c37cb"
+            ]
+        ]
+    },
+    {
+        "id": "01ab55a82d5c37cb",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "INSERT",
+        "func": "var gas_natural = msg.payload['esp32/gas_natural'] || 0;\nvar gas_petroleo = msg.payload['esp32/gas_petroleo'] || 0;\n\nmsg.topic = \"INSERT INTO monitoramento (gas_natural, gas_petroleo ,timeStamp) VALUES (\" + gas_natural + \", \" + gas_petroleo + \",CURRENT_TIMESTAMP);\"\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 560,
+        "wires": [
+            [
+                "83180b6084c7a39b"
+            ]
+        ]
+    },
+    {
+        "id": "c75e761d8bece1cb",
+        "type": "mqtt in",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "topic": "esp32/gas_natural",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "f98ef6dc4bf00888",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "bff15b64922cf024"
+            ]
+        ]
+    },
+    {
+        "id": "1746611bc5f5aba9",
+        "type": "mqtt in",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "topic": "esp32/gas_petroleo",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "f98ef6dc4bf00888",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 560,
+        "wires": [
+            [
+                "f93b14d0719e6e6e"
+            ]
+        ]
+    },
+    {
+        "id": "9f6dc41612b91825",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "DELET",
+        "func": "\nmsg.topic = \"Delete  FROM monitoramento ;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 840,
+        "wires": [
+            [
+                "3e68ef550a29a912"
+            ]
+        ]
+    },
+    {
+        "id": "39e5b15ab0a7d447",
+        "type": "debug",
+        "z": "4feba27cbb29cdf4",
+        "name": "dados mysql",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c350dcd694575060",
+        "type": "inject",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 840,
+        "wires": [
+            [
+                "9f6dc41612b91825"
+            ]
+        ]
+    },
+    {
+        "id": "290366da2a60cae6",
+        "type": "comment",
+        "z": "4feba27cbb29cdf4",
+        "name": "Mysql: Select últimos 10 dados para grafico e tabela",
+        "info": "",
+        "x": 290,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "fe429d3de07cf05e",
+        "type": "inject",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "4cbdcbbcddecd602"
+            ]
+        ]
+    },
+    {
+        "id": "4cbdcbbcddecd602",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "SELECT",
+        "func": "\n\nmsg.topic = \"SELECT gas_natural as gas_natural, gas_petroleo as gas_petroleo, timeStamp as timeStamp FROM monitoramento where timeStamp >= now() - 84600;\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "3f0db75143ce6cec"
+            ]
+        ]
+    },
+    {
+        "id": "63248209db52427e",
+        "type": "change",
+        "z": "4feba27cbb29cdf4",
+        "name": "Format data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t   $series := [\t       {\t           \"label\": \"GN (%)\",\t           \"field\": \"gas_natural\" \t       },\t       {\t           \"label\": \"GLP (%)\",\t           \"field\": \"gas_petroleo\" \t       }\t  ];\t   $xaxis := \"timeStamp\";\t   [\t       {\t           \"series\": $series.label,\t           \"data\": $series.[\t               (\t                   $yaxis := $.field;\t                   $$.payload.{\t                       \"x\": $lookup($, $xaxis),\t                       \"y\": $lookup($, $yaxis)\t          }\t        )\t      ]\t    }\t  ]\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 680,
+        "wires": [
+            [
+                "bc75fb0df8d610b0"
+            ]
+        ]
+    },
+    {
+        "id": "bacb4790cb272266",
+        "type": "inject",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "667c2c9dd9be2dcf"
+            ]
+        ]
+    },
+    {
+        "id": "667c2c9dd9be2dcf",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "SELECT",
+        "func": "\nmsg.topic = \"SELECT * FROM monitoramento ORDER BY timeStamp DESC LIMIT 10;\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 780,
+        "wires": [
+            [
+                "c607b158ef29d340"
+            ]
+        ]
+    },
+    {
+        "id": "4513f6171e2ffca9",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "Formatar Dados",
+        "func": "const formattedData = [];\n\nmsg.payload.forEach((row) => {\n    const formattedRow = {\n        hora: row.timeStamp,\n        gas_natural: row.gas_natural,\n        gas_petroleo: row.gas_petroleo\n    };\n    formattedData.push(formattedRow);\n});\n\nmsg.payload = formattedData;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 780,
+        "wires": [
+            [
+                "5ae1c8bc3740213f"
+            ]
+        ]
+    },
+    {
+        "id": "0630a8dfeca47758",
+        "type": "inject",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [
+                "01ab55a82d5c37cb"
+            ]
+        ]
+    },
+    {
+        "id": "bc177e3bd824eb6d",
+        "type": "mqtt in",
+        "z": "4feba27cbb29cdf4",
+        "name": "",
+        "topic": "esp32/gas_natural",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "f98ef6dc4bf00888",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "21af07a17a17e721",
+                "c8d27ccc46e3c5fd",
+                "17d8cf7da3e6489b"
+            ]
+        ]
+    },
+    {
+        "id": "21af07a17a17e721",
+        "type": "function",
+        "z": "4feba27cbb29cdf4",
+        "name": "Turn On LED",
+        "func": "var sensorValuegas_natural = msg.payload;\n\nif (sensorValuegas_natural > 20) {\n    // LED Verde\n    msg.payload = true;\n    msg.color = \"#00ff00\"; // Cor verde\n} else {\n    // LED Vermelho\n    msg.payload = false;\n    msg.color = \"#ff0000\"; // Cor vermelha\n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 100,
+        "wires": [
+            [
+                "a225e3c16137a7f7"
+            ]
+        ]
+    },
+    {
+        "id": "bdffa9294f976581",
+        "type": "ui_led",
+        "z": "4feba27cbb29cdf4",
+        "order": 4,
+        "group": "e20cd85b889eb118",
+        "width": 5,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED-gas_petroleo",
+        "x": 890,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a225e3c16137a7f7",
+        "type": "ui_led",
+        "z": "4feba27cbb29cdf4",
+        "order": 4,
+        "group": "a139738a6814e2a9",
+        "width": 5,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": true,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED-gas_natural",
+        "x": 930,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "664a3612e136fcdc",
+        "type": "ui_gauge",
+        "z": "4feba27cbb29cdf4",
+        "name": "Medidor Gás Liquefeito de Petróleo ",
+        "group": "e20cd85b889eb118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gás Liquefeito de Petróleo ",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#08d415",
+            "#e6e600",
+            "#ff2424"
+        ],
+        "seg1": "25",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "17d8cf7da3e6489b",
+        "type": "ui_gauge",
+        "z": "4feba27cbb29cdf4",
+        "name": "Medidor de Gás Natural",
+        "group": "a139738a6814e2a9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gás Natural",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#f20707"
+        ],
+        "seg1": "20",
+        "seg2": "25",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "506dd00b90a98034",
+        "type": "ui_chart",
+        "z": "4feba27cbb29cdf4",
+        "name": "Gráfico de Gás Liquefeito de Petróleo ",
+        "group": "e20cd85b889eb118",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "Gás Liquefeito de Petróleo",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1e28b3",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc75fb0df8d610b0",
+        "type": "ui_chart",
+        "z": "4feba27cbb29cdf4",
+        "name": "Gráfico",
+        "group": "3c1b09fa4c168fdf",
+        "order": 1,
+        "width": 20,
+        "height": 8,
+        "label": "Gás Natural e Gás Liquefeito de Petróleo ",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#078f05",
+            "#2d2da8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8d27ccc46e3c5fd",
+        "type": "ui_chart",
+        "z": "4feba27cbb29cdf4",
+        "name": "Gráfico de Gás Natural",
+        "group": "a139738a6814e2a9",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "Gás Natural",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#e47311",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 700,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ae1c8bc3740213f",
+        "type": "ui_template",
+        "z": "4feba27cbb29cdf4",
+        "group": "3c1b09fa4c168fdf",
+        "name": "Tabela ",
+        "order": 3,
+        "width": 20,
+        "height": 6,
+        "format": "<div layout=\"row\" layout-align=\"start center\">\n  <span flex>Hora</span>\n  <span flex>Gás Natural</span>\n  <span flex>Gás Liquefeito de Petróleo</span>\n  \n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"row in msg.payload\">\n  <span flex style=\"color: white\">{{row.hora}}</span>\n  <span flex style=\"color: white\">{{row.gas_natural}} %</span>\n  <span flex style=\"color: white\">{{row.gas_petroleo}} %</span>\n  \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 870,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83180b6084c7a39b",
+        "type": "mysql",
+        "z": "4feba27cbb29cdf4",
+        "mydb": "8c7e6b9829da8806",
+        "name": "conexao_mysql",
+        "x": 1240,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e68ef550a29a912",
+        "type": "mysql",
+        "z": "4feba27cbb29cdf4",
+        "mydb": "8c7e6b9829da8806",
+        "name": "conexao_mysql",
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "39e5b15ab0a7d447"
+            ]
+        ]
+    },
+    {
+        "id": "3f0db75143ce6cec",
+        "type": "mysql",
+        "z": "4feba27cbb29cdf4",
+        "mydb": "8c7e6b9829da8806",
+        "name": "conexao_mysql",
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "63248209db52427e"
+            ]
+        ]
+    },
+    {
+        "id": "c607b158ef29d340",
+        "type": "mysql",
+        "z": "4feba27cbb29cdf4",
+        "mydb": "8c7e6b9829da8806",
+        "name": "conexao_mysql",
+        "x": 520,
+        "y": 780,
+        "wires": [
+            [
+                "4513f6171e2ffca9"
+            ]
+        ]
+    }
+]
